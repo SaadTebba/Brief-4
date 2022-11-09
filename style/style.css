@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    transition: 0.2s;
+    font-family: 'Chakra Petch', sans-serif;
+}
+body {
+    margin: 0;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav nav nav main main main main main main main main main";
+}
+main {
+    padding-left: 3%;
+    padding-right: 3%;
+    grid-area: main;
+}
+
+/* =================== headings & paragraphs =================== */
+
+
+h1 {
+    margin: 8% 0 4% 0;
+}
+h2 {
+    background-color: rgb(254,189,89);
+    width: 20%;
+    padding: 3px 10px;
+    margin-bottom: 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 50px;
+}
+p {
+    margin: 0;
+}
+
+
+/* =================== navbar -- aside =================== */
+
+
+nav {
+    background-color: rgb(254,189,89);
+    grid-area: nav;
+}
+
+ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    height: 10%;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li:hover {
+    background-color: white;
+    margin-left: 1%;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+.hidden {
+    background-color: rgb(152, 84, 0);
+    display: none;
+}
+
+.menu {
+    background-color: burlywood;
+}
+
+
+/* =================== inputs =================== */
+
+.demo-box .user-box {
+    position: relative;
+}
+
+.demo-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background: transparent;
+}
+
+.demo-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.demo-box .user-box input:focus~label, .demo-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #000000;
+    font-size: 12px;
+}
+
+.demo-box button {
+    padding: 10px 20px;
+    color: #000000;
+    transition: .5s;
+    letter-spacing: 4px;
+    color: black;
+    font-weight: 600;
+    border: solid black 1px;
+}
+
+.demo-box button:hover {
+    color: #000000ca;
+    background-color: rgb(254,189,89);
+    border-radius: 5px;
+    border-color: rgb(254,189,89);
+    cursor: pointer;
+}
+
+
+/* Sections & Date validation & Table tr td */
+
+
+#result {
+    margin-top: 2em;
+}
+
+section {
+    background-color: #eee;
+    padding: 2em 1em;
+}
+
+#last {
+    margin-bottom: 2em;
+}
+
+table tr td {
+    background-color: #ffffff;
+    padding: 1em;
+}
+
+table {
+    text-align: center;
+    width: 50%;
+}
+
+.table{
+    background-color: rgb(199, 199, 199);
+    margin: 1em 10%;
+    padding: 1em;
+    overflow:scroll;
+}
+.table input{
+    margin: 0;
+    height: 3em;
+    text-align: center;
+    width: 10%;
+    font-size: large;
+}
+
+.dark {
+    background-color: #222831;
+}
+nav.dark {
+    background-color: #393E46;
+    color: #cdcdcd;
+}
+section.dark {
+    background-color: #6e6e6e;
+    color: #FFFFFF;
+}
+h1.dark {
+    color: white;
+}
+h2.dark {
+    background-color: #EEEEEE;
+}
+.mode {
+    margin: 0 0 0 15%;
+    display: inline-block;
+    width: 20%;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+}
+.mode:hover{
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+#light{
+    color: #FFFFFF;
+    background-color: #000000;
+}
+#light:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
+/*===================  Media Queries === Responsive Design  =================== */
+
+
+#menu {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    nav h3 {
+        display: none;
+    }
+    #menu {
+        display: block;
+        margin: 0.5em auto auto auto;
+        background-color: transparent;
+        color: black;
+        font-size: 200%;
+        padding: 0;
+        border: none;
+    }
+    h1 {
+        font-size: 150%;
+    }
+    h2 {
+        font-size: 100%;
+        width: 45%;
+    }
+    main {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    p {
+        font-size: 70%;
+    }
+    #last {
+        overflow: scroll;
+    }
+    nav ul li a {
+        font-size: 50%;
+        padding: 5px;
+    }
+    nav ul {
+        padding: 0;
+    }
+    .demo-box .user-box label, .demo-box .user-box input {
+        font-size: 10px;
+    }
+    .demo-box .user-box input:focus~label, .demo-box .user-box input:valid~label {
+        font-size: 8px;
+    }
+    .demo-box button {
+        padding: 5px 10px;
+        color: #000000;
+        transition: .5s;
+        letter-spacing: 2px;
+        color: black;
+        font-weight: 500;
+        border: solid black 1px;
+        font-size: 10px;
+    }
+    .mode{
+        width: 30%;
+        font-size: 2%;
+    }
+    #inputt input{
+        width: 50%;
+    }
+}

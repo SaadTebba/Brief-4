@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title> Calculator </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/script/nav.js"></script>
+    <script src="/script/dark-mode.js"></script>
+    <script src="/script/calculator.js"></script>
+</head>
+
+<body>
+    <nav id="nav">
+        <h3>menu</h3>
+        <button type="menu" id="menu" onclick="showmenu()"><i class="fa fa-bars"></i></button>
+        <ul id="showmenu">
+            <li class="show"><a href="/html/index.html">Variables et affectation</a></li>
+            <li class="show"><a href="/html/Valider-une-date.html">Conditions</a></li>
+            <li class="menu show"><a href="#" onfocus="showboucle()">Boucles</a></li>
+            <li class="hidden show" id="show-1"><a href="/html/la-boucle-for.html">La boucle for</a></li>
+            <li class="hidden show" id="show-2"><a href="/html/la-boucle-while.html">La boucle while</a></li>
+            <li class="hidden show" id="show-3"><a href="/html/la-boucle-inbrique.html">Les boucles imbriquées</a></li>
+            <li class="menu show"><a href="#" onfocus="showcaractères()">Chaines de caractères</a></li>
+            <li class="hidden show" id="show-01"><a href="/html/Recherche-et-suppression-dans-une-chaine.html">Recherche
+                    et
+                    suppression</a></li>
+            <li class="hidden show" id="show-02"><a href="/html/voiel.html">Nombre de voyelles</a></li>
+            <li class="menu show"><a href="#" onfocus="showTableaux()">Tableaux</a></li>
+            <li class="hidden show" id="show-001"><a href="/html/Tri-d'un-tableau.html">Tri</a></li>
+            <li class="hidden" id="show-002"><a href="/html/recherche.html">Recherche</a></li>
+            <li class="show"><a href="/html/calculator.html">Fonctions</a></li>
+        </ul>
+        <button type="button" class="mode" onclick="enableDarkMode()">Dark mode</button>
+        <button type="button" class="mode" id="light"  onclick="enableLightMode()">Light mode</button>
+    </nav>
+    <main>
+        <header>
+            <h1 id="darkmodeh1">Calculatrice</h1>
+        </header>
+        <h2 id="darkmodeh21">Enoncé</h2>
+        <section  id="section1" class="one">
+
+            <p>Créez 4 fonctions Javascript (Somme, Soustraction, Division, Multiplication).
+                L’utilisateur saisie deux nombres dans deux inputs, choisi ensuite une opération
+                arithmétique. Le résultat est donné par l’une des 4 fonctions Javascript.
+            </p>
+        </section>
+        <h2 id="darkmodeh22" class="one">Démo</h2>
+
+        <section class="demo-box one" id="section2">
+
+            <div class="user-box">
+                <input type="text" name="" required="" id="number1" value="">
+                <label for="number-1">First number</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required="" id="number2" value="">
+                <label for="number-2">Second number</label>
+            </div>
+
+            <button type="button" onclick="plus()">+</button>
+            <button type="button" onclick="minus()">-</button>
+            <button type="button" onclick="divide()">/</button>
+            <button type="button" onclick="multiply()">x</button><br><br>
+
+            <label for="results">Results : </label>
+            <output id="results"></output>
+
+        </section>
+
+        <h2 id="darkmodeh23">Code source</h2>
+        <section class="one" id="last">
+            <pre id="code"></pre>
+        </section>
+    </main>
+</body>
+
+</html>
